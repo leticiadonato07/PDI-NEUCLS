@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Dataset original
+data/raw/
+
+# Resultados e modelos treinados
+checkpoints/
+results/
