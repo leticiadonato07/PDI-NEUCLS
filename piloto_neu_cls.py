@@ -44,7 +44,6 @@ from thop import profile
 # ============================================================
 # CONFIGURACOES DO PILOTO
 # ============================================================
-# AJUSTE ESTES DOIS CAMINHOS:
 DATASET_ROOT = Path(r"data/raw/NEU-CLS")
 SPLITS_CSV = Path(r"data/processed/splits_neu_cls.csv")
 
@@ -83,9 +82,9 @@ NORMALIZE_STD = (0.229, 0.224, 0.225)
 INFERENCE_BATCH_SIZE = 1
 WARMUP_RUNS = 10
 INFERENCE_RUNS = 100
-NUM_WORKERS = 0  # mais simples/seguro no Windows para o piloto
+NUM_WORKERS = 0
 PIN_MEMORY = False
-CPU_THREADS = None  # None = padrao do PyTorch
+CPU_THREADS = None
 
 IMAGE_EXTENSIONS = {".bmp", ".jpg", ".jpeg", ".png", ".tif", ".tiff"}
 

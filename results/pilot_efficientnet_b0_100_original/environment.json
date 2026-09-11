@@ -1,0 +1,18 @@
+{
+    "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+    "machine": "AMD64",
+    "pytorch": "2.14.0+cpu",
+    "torchvision": "0.29.0+cpu",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "pillow": "12.3.0",
+    "scikit_learn": "1.9.0",
+    "thop": "0.1.1",
+    "device": "cpu",
+    "cuda_available": false,
+    "torch_num_threads": 10,
+    "gpu_name": "Nenhuma GPU CUDA detectada",
+    "cuda_version": null
+}

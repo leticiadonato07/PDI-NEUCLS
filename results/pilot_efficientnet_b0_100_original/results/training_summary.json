@@ -1,0 +1,9 @@
+{
+    "best_epoch": 4,
+    "best_val_macro_f1": 1.0,
+    "epochs_executed": 9,
+    "training_time_seconds": 512.3096426999982,
+    "training_time_minutes": 8.53849404499997,
+    "peak_process_rss_mb": 724.22265625,
+    "best_checkpoint": "results\\pilot_efficientnet_b0_100_original\\checkpoints\\best_model.pth"
+}

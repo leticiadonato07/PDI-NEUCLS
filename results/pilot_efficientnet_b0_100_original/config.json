@@ -1,0 +1,118 @@
+{
+    "experiment_type": "pilot",
+    "model": "EfficientNet-B0",
+    "pretrained_imagenet_weights": true,
+    "num_classes": 6,
+    "classes": [
+        "Cr",
+        "In",
+        "Pa",
+        "PS",
+        "RS",
+        "Sc"
+    ],
+    "dataset_total_images": 1799,
+    "dataset_split": {
+        "train": 1259,
+        "val": 180,
+        "test": 360
+    },
+    "split_seed": 42,
+    "training_seed": 42,
+    "input_resolution": [
+        100,
+        100
+    ],
+    "brightness_factor": 1.0,
+    "preprocessing": {
+        "grayscale_to_rgb": true,
+        "normalization_mean": [
+            0.485,
+            0.456,
+            0.406
+        ],
+        "normalization_std": [
+            0.229,
+            0.224,
+            0.225
+        ]
+    },
+    "augmentation": {
+        "enabled": true,
+        "rotation_degrees": 10,
+        "translate_fraction": 0.05,
+        "scale_range": [
+            0.95,
+            1.05
+        ],
+        "horizontal_flip_probability": 0.5,
+        "brightness_augmentation": false
+    },
+    "training": {
+        "framework": "PyTorch",
+        "batch_size": 32,
+        "max_epochs": 50,
+        "optimizer": "AdamW",
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "loss": "CrossEntropyLoss",
+        "scheduler": "CosineAnnealing",
+        "early_stopping_metric": "val_macro_f1",
+        "early_stopping_patience": 5,
+        "min_delta": 0.0
+    },
+    "efficiency": {
+        "model": "EfficientNet-B0",
+        "input_size": "100x100",
+        "parameters": 4015234,
+        "parameters_millions": 4.015234,
+        "macs": 107223936,
+        "macs_millions": 107.223936,
+        "estimated_flops": 214447872,
+        "estimated_flops_millions": 214.447872,
+        "thop_parameters": 4015234
+    },
+    "training_summary": {
+        "best_epoch": 4,
+        "best_val_macro_f1": 1.0,
+        "epochs_executed": 9,
+        "training_time_seconds": 512.3096426999982,
+        "training_time_minutes": 8.53849404499997,
+        "peak_process_rss_mb": 724.22265625,
+        "best_checkpoint": "results\\pilot_efficientnet_b0_100_original\\checkpoints\\best_model.pth"
+    },
+    "test_metrics": {
+        "accuracy": 0.9944444444444445,
+        "macro_precision": 0.9946236559139785,
+        "macro_recall": 0.9944444444444445,
+        "macro_f1": 0.9944429008057795
+    },
+    "inference": {
+        "batch_size": 1,
+        "warmup_runs": 10,
+        "measured_runs": 100,
+        "mean_ms_per_image": 29.957205000100657,
+        "std_ms_per_image": 5.1197722315967935,
+        "min_ms_per_image": 21.99290000135079,
+        "max_ms_per_image": 50.34029999660561,
+        "fps_from_mean": 33.380951260193996
+    },
+    "environment": {
+        "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+        "machine": "AMD64",
+        "pytorch": "2.14.0+cpu",
+        "torchvision": "0.29.0+cpu",
+        "numpy": "2.5.3",
+        "pandas": "3.0.5",
+        "pillow": "12.3.0",
+        "scikit_learn": "1.9.0",
+        "thop": "0.1.1",
+        "device": "cpu",
+        "cuda_available": false,
+        "torch_num_threads": 10,
+        "gpu_name": "Nenhuma GPU CUDA detectada",
+        "cuda_version": null
+    }
+}
