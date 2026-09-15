@@ -47,8 +47,7 @@ from thop import profile
 DATASET_ROOT = Path(r"data/raw/NEU-CLS")
 SPLITS_CSV = Path(r"data/processed/splits_neu_cls.csv")
 
-OUTPUT_ROOT = Path(r"results/pilot_efficientnet_b0_100_original")
-
+OUTPUT_ROOT = Path(r"results/pilot2_efficientnet_b0_100_original")
 MODEL_NAME = "EfficientNet-B0"
 INPUT_SIZE = 100
 BRIGHTNESS_FACTOR = 1.0
@@ -70,9 +69,6 @@ USE_PRETRAINED_WEIGHTS = True
 
 # Augmentation geometrico leve, sem brilho/contraste.
 USE_AUGMENTATION = True
-ROTATION_DEGREES = 10
-TRANSLATE_FRACTION = 0.05
-SCALE_RANGE = (0.95, 1.05)
 HORIZONTAL_FLIP_P = 0.50
 
 # Proposta para pesos ImageNet.
@@ -312,11 +308,6 @@ def build_transforms():
     train_ops = [BrightnessMultiply(BRIGHTNESS_FACTOR), resize, to_rgb]
     if USE_AUGMENTATION:
         train_ops += [
-            transforms.RandomAffine(
-                degrees=ROTATION_DEGREES,
-                translate=(TRANSLATE_FRACTION, TRANSLATE_FRACTION),
-                scale=SCALE_RANGE,
-            ),
             transforms.RandomHorizontalFlip(p=HORIZONTAL_FLIP_P),
         ]
     train_ops += [transforms.ToTensor(), normalize]
@@ -679,9 +670,6 @@ def save_config(run_dir: Path, environment: Dict, dataset_df: pd.DataFrame, prof
         },
         "augmentation": {
             "enabled": USE_AUGMENTATION,
-            "rotation_degrees": ROTATION_DEGREES,
-            "translate_fraction": TRANSLATE_FRACTION,
-            "scale_range": SCALE_RANGE,
             "horizontal_flip_probability": HORIZONTAL_FLIP_P,
             "brightness_augmentation": False,
         },
