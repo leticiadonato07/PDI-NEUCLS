@@ -1,0 +1,9 @@
+{
+    "best_epoch": 27,
+    "best_val_macro_f1": 0.9834213207372419,
+    "epochs_executed": 32,
+    "training_time_seconds": 288.7306200000021,
+    "training_time_minutes": 4.812177000000035,
+    "peak_process_rss_mb": 529.4453125,
+    "best_checkpoint": "C:\\Projetos\\PDI-NEUCLS\\results\\experimento_completo\\MobileNetV3-Small__res50__light1p0__seed123\\checkpoints\\best_model.pth"
+}

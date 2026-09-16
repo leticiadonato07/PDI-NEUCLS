@@ -43,9 +43,7 @@ DATASET_ROOT = Path(r"C:\Projetos\PDI-NEUCLS\data\raw\NEU-CLS\NEU-CLS")
 SPLITS_CSV = Path(r"C:\Projetos\PDI-NEUCLS\data\processed\splits_neu_cls.csv")
 OUTPUT_ROOT = Path(r"C:\Projetos\PDI-NEUCLS\results\experimento_completo")
 
-# Primeiro teste seguro: 1.
-# Quando o teste estiver OK, trocar para None para as 81 execuções.
-MAX_EXPERIMENTS: Optional[int] = 1
+MAX_EXPERIMENTS: Optional[int] = None
 RESUME = True
 
 MODELS_TO_RUN = [
@@ -76,15 +74,12 @@ MIN_DELTA = 0.0
 
 USE_PRETRAINED_WEIGHTS = True
 
-# Fechado após o piloto 2: somente flip horizontal no treino.
 AUGMENTATION_ENABLED = True
 HORIZONTAL_FLIP_P = 0.5
 
-# Igual ao piloto validado.
 NORMALIZE_MEAN = (0.485, 0.456, 0.406)
 NORMALIZE_STD = (0.229, 0.224, 0.225)
 
-# Inferência oficial.
 INFERENCE_BATCH_SIZE = 1
 WARMUP_RUNS = 10
 INFERENCE_RUNS = 100
@@ -975,8 +970,6 @@ def save_consolidated_results() -> None:
         OUTPUT_ROOT / "eficiencia_por_configuracao.csv",
     )
 
-    # Resumo em formato mais simples para facilitar o artigo:
-    # mean/std ficam explícitos nas colunas.
     simple_rows = []
     for _, group in df.groupby(group_cols):
         record = {
