@@ -1,0 +1,9 @@
+torch
+torchvision
+numpy
+pandas
+pillow
+matplotlib
+scikit-learn
+psutil
+thop==2.1.6

@@ -1,0 +1,2 @@
+model,resolution,brightness_factor,parameters,parameters_millions,macs,macs_millions,estimated_flops,estimated_flops_millions,thop_version
+MobileNetV3-Small,50,0.7,1524006,1.524006,5448936,5.448936,10897872,10.897872,2.1.6

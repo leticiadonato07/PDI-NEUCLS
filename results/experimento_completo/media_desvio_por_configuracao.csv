@@ -1,0 +1,3 @@
+model,resolution,brightness_factor,accuracy,accuracy,macro_precision,macro_precision,macro_recall,macro_recall,macro_f1,macro_f1,inference_mean_ms,inference_mean_ms,inference_fps,inference_fps,training_time_minutes,training_time_minutes,epochs_executed,epochs_executed,best_val_macro_f1,best_val_macro_f1
+,,,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std
+MobileNetV3-Small,50,0.7,0.9527777777777777,,0.9545661904051551,,0.9527777777777776,,0.952721892856056,,7.540522999988752,,132.61679594392746,,5.649872945,,29.0,,0.9833317896946684,
