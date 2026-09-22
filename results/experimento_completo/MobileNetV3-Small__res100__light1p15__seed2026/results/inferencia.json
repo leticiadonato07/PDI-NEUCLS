@@ -1,0 +1,10 @@
+{
+    "batch_size": 1,
+    "warmup_runs": 10,
+    "measured_runs": 100,
+    "mean_ms_per_image": 9.426811997545883,
+    "std_ms_per_image": 1.5700221156847374,
+    "min_ms_per_image": 6.180800031870604,
+    "max_ms_per_image": 11.762899986933917,
+    "fps_from_mean": 106.08040133401767
+}

@@ -1,0 +1,2 @@
+model,input_size,parameters,parameters_millions,macs,macs_millions,estimated_flops,estimated_flops_millions,thop_parameters,thop_version
+MobileNetV3-Small,200x200,1524006,1.524006,54158184,54.158184,108316368,108.316368,1524006,2.1.6
