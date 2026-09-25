@@ -1,0 +1,9 @@
+{
+    "best_epoch": 13,
+    "best_val_macro_f1": 0.9944429008057795,
+    "epochs_executed": 18,
+    "training_time_seconds": 709.1097334999995,
+    "training_time_minutes": 11.818495558333325,
+    "peak_process_rss_mb": 309.83984375,
+    "best_checkpoint": "C:\\Projetos\\PDI-NEUCLS\\results\\experimento_completo\\EfficientNet-B0__res50__light1p15__seed2026\\checkpoints\\best_model.pth"
+}
