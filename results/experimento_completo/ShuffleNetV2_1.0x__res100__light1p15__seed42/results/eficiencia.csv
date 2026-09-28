@@ -1,0 +1,2 @@
+model,input_size,parameters,parameters_millions,macs,macs_millions,estimated_flops,estimated_flops_millions,thop_parameters,thop_version
+ShuffleNetV2 1.0x,100x100,1259754,1.259754,39502984,39.502984,79005968,79.005968,1259754,2.1.6

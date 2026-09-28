@@ -1,0 +1,9 @@
+{
+    "best_epoch": 15,
+    "best_val_macro_f1": 0.9944429008057795,
+    "epochs_executed": 20,
+    "training_time_seconds": 219.39517269999487,
+    "training_time_minutes": 3.656586211666581,
+    "peak_process_rss_mb": 507.05859375,
+    "best_checkpoint": "C:\\Projetos\\PDI-NEUCLS\\results\\experimento_completo\\ShuffleNetV2_1.0x__res50__light1p15__seed2026\\checkpoints\\best_model.pth"
+}
