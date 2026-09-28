@@ -1,0 +1,2 @@
+model,input_size,parameters,parameters_millions,macs,macs_millions,estimated_flops,estimated_flops_millions,thop_parameters,thop_version
+EfficientNet-B0,200x200,4015234,4.015234,365444448,365.444448,730888896,730.888896,4015234,2.1.6
